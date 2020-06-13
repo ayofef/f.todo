@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.LayoutBox{
+    
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.LayoutBoxHeader{
+    min-height: 4rem;
+}

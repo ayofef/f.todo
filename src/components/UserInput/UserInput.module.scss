@@ -1,0 +1,100 @@
+@import "../../styles/variables";
+
+
+.Input{
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    &__Heading{
+        text-align: center;
+        margin: 2rem 2rem 4rem 2rem;
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #33658a;
+    }
+
+    &__Group{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+               
+        
+      &__Text{
+        border: 1px solid #33658a;
+        width: 80%;
+        display: block;
+        border-radius: .8rem;
+        padding: 1.5rem 1.5rem;
+        box-sizing: border-box;
+        transition: all .3s ease-out;
+        transform: scale(.9);
+        height: 100%;
+
+        &:focus{
+          outline: none;
+          transform: scale(1);
+          box-shadow: 0.3rem 0.3rem 1.6rem rgba(#33658a, .17);
+        }
+      }
+
+      &__Button{
+        cursor: pointer;
+        margin-top: 3rem;
+        background-color: #33658a;
+        border: none;
+        padding: 1.2rem 7rem;
+        border-radius: .6rem;
+        font-weight: 600;
+        color: #fff;
+        transition: all .3s ease-out;
+        backface-visibility: hidden;
+        position: relative;
+
+        &:focus{
+            outline: none;
+        }
+
+        &:hover{
+            transform: translateY(-0.2rem);
+            box-shadow: 0 0.8rem 0.5rem rgba(#33658a, 0.1);
+	        letter-spacing: 0.1rem;
+        }
+        &:active{
+        transform: translateY(-0.063rem);
+        box-shadow: 0 0.4rem 0.5rem rgba(#33658a, 0.05);
+        }
+    }
+      
+      
+
+        
+    }
+
+    
+}
+
+.btn:link,
+.btn:visited{
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  backface-visibility: hidden;
+  position: relative;
+	letter-spacing: 0.1rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+.btn:hover{
+  transform: translateY(-0.188rem);
+  box-shadow: 0 0.8rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.btn:active{
+  transform: translateY(-0.063rem);
+  box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.05);
+}

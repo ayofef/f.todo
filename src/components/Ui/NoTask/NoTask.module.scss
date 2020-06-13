@@ -1,0 +1,28 @@
+.NoTask{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-out;
+    animation: enterTop .3s ease-out;
+    transform: translateY(0);
+    animation-fill-mode: backwards;
+
+    & img{
+        width: 2rem;
+    }
+
+    & p{
+        padding-left: 1rem;
+    }
+}
+
+@keyframes enterTop {
+    0% {
+        opacity: 0; transform: translateY(-.5rem);
+    }
+
+    100% {
+        opacity: 1; transform: translateY(0);
+    }
+}

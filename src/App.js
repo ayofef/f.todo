@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect} from 'react';
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
+import Layout from "./container/Layout/Layout";
+import "./styles/main.scss";
 
-function App() {
+
+function App(props) {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <HelmetProvider>
+      <Layout />
+    </HelmetProvider>
+    </BrowserRouter>
   );
+  
 }
 
 export default App;

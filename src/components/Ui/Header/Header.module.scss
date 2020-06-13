@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+.Ftodo{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    font-size: 1.4rem;
+    color: #33658a;
+
+    &__masthead{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    &__logo{
+        padding: 2.5rem 0;
+        font-size: 3.5rem;
+        font-family: 'Marck Script', cursive;
+        & a{
+            color: #33658a;
+            text-decoration: none;
+        }
+    }
+
+    &__nav{
+
+        & ul{
+            list-style-type: none;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transition: all .3s ease-out;
+
+            & > :not(:last-child){
+                margin-right: 2rem;
+
+                
+            }
+
+            & li{
+                cursor: pointer;
+
+
+                & a,
+                & i{
+                    color: #33658a;
+                    text-decoration: none;
+
+                    &::after{
+                        content: "";
+                        display: block;
+                        position: relative;
+                        top: .5rem;
+                        width: 100%;
+                        opacity: 0;
+                        height: 1px;
+                        background-color: #1e212b;
+                        transition: all .3s ease-out;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                    }
+    
+                    &:hover::after{
+                        opacity: 1;
+                        transform: scaleX(1);
+                        transform-origin: right;
+                    }
+                }
+            }
+        }
+
+        &__initials{
+            background-color: #33658a;
+            padding: 1.1rem;
+            border-radius: 2rem;
+            color: #fff;
+        }
+    }
+}
+
+.activeNavLink{
+    font-weight: 600;
+  }
+

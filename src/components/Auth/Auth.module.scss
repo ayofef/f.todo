@@ -1,0 +1,220 @@
+.BOXBOX{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2.5rem;
+}
+.Auth{
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 3rem 2rem 5rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 2rem rgba(#777, .2rem);
+    color: #33658a;
+
+    &__Intro{
+        margin: 2rem 0 3rem 0;
+        text-align: center;
+
+        &___Title{
+            font-size: 2.5rem;
+        }
+    }
+
+    &__Form{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease-out;
+
+        &___FormGroup{
+            width: 80%;
+            margin-bottom: 2rem;
+            transition: all .3s ease-out;
+
+            & > *{
+                display: block;
+            }
+            & label {
+                font-size: 1.4rem;
+                margin-left: 1.5rem;
+                padding-bottom: 1rem;
+                font-weight: 600;
+
+            }
+            & input {
+                border: none;
+                padding: 1rem 1.5rem;
+                box-sizing: border-box;
+                width: 100%;
+                margin-bottom: .5rem;
+                border-radius: .5rem;
+                transition: all .3s ease-out;
+                transform: translateY(0rem);
+                background-color: #e8f0fe;
+                backface-visibility: hidden;
+
+                &:focus{
+                    outline: none;
+                    transform: translateY(-0.4rem);
+                    box-shadow: 0 0.5rem 0.8rem rgba(#000, 0.1);
+                }
+
+            }
+            & div {
+                margin-left: 1.5rem;
+                color: red;
+                opacity: 1;
+                transform: translateX(0);
+                animation: ErrorMsg .3s cubic-bezier(1, 0, 0, 1);
+                animation-fill-mode: backwards;
+            }
+
+        }
+
+        &___Button{
+            cursor: pointer;
+            display: block;
+            width: 80%;
+            border: none;
+            background-color: #33658a;
+            color: #fff;
+            padding: 1rem 1.5rem;
+            border-radius: .5rem;
+            box-sizing: border-box;
+            height: 3.8rem;
+
+            &:disabled{
+                background-color: rgba(#33658a, .6);
+            }
+        }
+
+        
+    }
+
+    &__ERROR_RESET{
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 2.5rem 0 0 0;
+
+    }
+    &__Error{
+        & p{
+            color: red;
+            opacity: 1;
+            transform: translateX(0);
+            animation: ErrorMsg .3s cubic-bezier(1, 0, 0, 1);
+            animation-fill-mode: backwards;
+        }
+
+        &__Success{
+            color: #33658a !important;
+        }
+
+    }
+
+    &__ResetLink{
+        margin-left: auto;
+        font-weight: 600;
+        display: block;
+        text-decoration: none;
+        transition: all .3s ease-out;
+
+        &:link,
+        &:visited{
+            color: rgba(#33658a, .8);
+        }
+
+        &:hover,
+        &:active{
+            color: #33658a;
+        }
+    }
+    
+    &__Splitter{
+        margin: 0 auto;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0 3rem 0;
+            
+        & hr{
+            flex: 1;
+            display: block;
+            border-top: 1px solid rgba(#33658a, .3);
+            border-bottom: none;
+            border-right: none;
+            border-left: none;
+        }
+        & p{
+            margin: 0 1rem;
+        }
+    }
+
+    &__ThirdParty{
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > :not(:last-child){
+            margin-right: 2rem;
+        }
+
+        & button{
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: .5rem;
+            background-color: #fff;
+            cursor: pointer;
+            transform: translateY(0);
+            transition: all .3s ease-out;
+            color: #33658a;
+            border: 1px solid #33658a;
+
+            & span{
+                margin-right: 1rem;
+
+                & img{
+                    width: 2rem;
+                }
+            }
+            &:focus{
+                outline: none;
+            }
+            &:hover{
+                transform: translateY(-0.3rem);
+                box-shadow: 0 0.6rem 0.5rem rgba(#000, 0.1);
+            }
+            &:active{
+                transform: translateY(-0.1rem);
+                box-shadow: 0 0.4rem 0.5rem rgba(#000, 0.05);
+            }
+
+        }
+    }
+}
+
+@keyframes ErrorMsg {
+    0%{
+        opacity: 0;
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
