@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 .Ftodo{
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     background-color: #fff;
@@ -15,7 +17,7 @@
         
     }
     &__logo{
-        padding: 2.5rem 0;
+        padding: 3.5rem 0 1rem 0;
         font-size: 3.5rem;
         font-family: 'Marck Script', cursive;
         & a{

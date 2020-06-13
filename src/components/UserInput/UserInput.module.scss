@@ -7,6 +7,9 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    
 
     &__Heading{
         text-align: center;
@@ -14,6 +17,11 @@
         font-size: 3.5rem;
         font-weight: 700;
         color: #33658a;
+
+        @media screen and (max-width: 44em){
+          font-size: 2rem;
+          margin: 2rem 1rem;
+        }
     }
 
     &__Group{
@@ -35,6 +43,12 @@
         transform: scale(.9);
         height: 100%;
 
+        @media screen and (max-width: 44em){
+          min-width: 40rem;
+        }
+
+        
+
         &:focus{
           outline: none;
           transform: scale(1);
@@ -54,6 +68,10 @@
         transition: all .3s ease-out;
         backface-visibility: hidden;
         position: relative;
+
+        @media screen and (max-width: 44em){
+          min-width: 35rem;
+        }
 
         &:focus{
             outline: none;
