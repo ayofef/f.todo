@@ -24,7 +24,8 @@
     color: #33658a;
 
     @media screen and (max-width: 44em){
-        width: 100%
+        width: 100%;
+        box-shadow: none;
     }
 
     &__Intro{
