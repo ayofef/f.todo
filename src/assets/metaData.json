@@ -2,7 +2,7 @@
     "siteMetadata" : {
         "author" : "Farouq Ayofe",
         "title" : "F.todo | ",
-        "siteUrl" : "/",
+        "siteUrl" : "https://ftodo.farouq.dev",
         "description": "A todo App, where the user has the ability to Add and Delete tasks. User authentication with Google Firebase and the user is forced to verify his email before using the App. Tasks are saved to Google Firestore and automatically switches to local storage when user is offline. It's also possible to Re-send the verification email, recover user password and edit the user profile.",
         "type": "website",
         "image": "snapshot.jpg",

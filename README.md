@@ -14,7 +14,7 @@
 
 
 
-## 🚀 [Live at: Cinematheque.dev](https://cinematheque.dev/)
+## 🚀 [Live at: ftodo.farouq.dev](https://cinematheque.dev/)
 
 
 
