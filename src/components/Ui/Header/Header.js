@@ -45,7 +45,7 @@ const Header = (props) => {
                     <nav className={classes.Ftodo__nav}>
                         <ul>
                             {
-                                id ? <Link to="/user-profile"><li className={classes.Ftodo__nav__initials}> {props.profile.initials} </li></Link> : null
+                                id ? <Link to="/user-profile" style={{textDecoration: "none"}}><li className={classes.Ftodo__nav__initials}> {props.profile.initials} </li></Link> : null
                             }
                             {
                                 mainNav && mainNav.map(({name, link, clicked}, id) => {
