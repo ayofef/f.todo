@@ -2,12 +2,12 @@
 
 
 .Input{
-
+  
+   width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     box-sizing: border-box;
     
 
@@ -34,7 +34,7 @@
         
       &__Text{
         border: 1px solid #33658a;
-        width: 80%;
+        flex: 1 1 90%;
         display: block;
         border-radius: .8rem;
         padding: 1.5rem 1.5rem;
@@ -44,7 +44,7 @@
         height: 100%;
 
         @media screen and (max-width: 44em){
-          min-width: 40rem;
+          width: 100%;
         }
 
         
@@ -68,10 +68,10 @@
         transition: all .3s ease-out;
         backface-visibility: hidden;
         position: relative;
-
-        @media screen and (max-width: 44em){
-          min-width: 35rem;
-        }
+        width: 100%;
+        max-width: 35rem;
+        box-sizing: border-box;
+        
 
         &:focus{
             outline: none;
