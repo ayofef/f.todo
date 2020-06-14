@@ -29,6 +29,8 @@
     &__nav{
 
         & ul{
+            position: relative;
+            transform: translateY(1.2rem);
             list-style-type: none;
             width: 100%;
             display: flex;
