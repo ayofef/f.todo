@@ -42,7 +42,7 @@ const SignUp = (props) => {
         <div className={classes.BOXBOX}>
             <Helmet> 
                 <title>{site.siteMetadata.title} Sign Up</title>
-                <meta name="google-site-verification" content="1PzEhgav7N4Baqikr-U-/" />
+                <meta name="google-site-verification" content="0j6Ak-DmlE9O9Iq6AsPF3Ydvg4057AYgw7ilMoZV6sM" />
                 <meta name="author" content={site.siteMetadata.author} />
                 <meta name="description" content={site.siteMetadata.description} />
                 <meta name="thumbnail" content={[site.siteMetadata.siteUrl, "/", site.siteMetadata.image].join("")} />
