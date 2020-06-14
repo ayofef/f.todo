@@ -28,6 +28,11 @@ const initialState = {
         error: null,
         loading: false,
         success: null
+    },
+    deleteAccount: {
+        error: null,
+        loading: false,
+        success: null
     }
 };
 
@@ -165,6 +170,29 @@ const authReducer = (state = initialState, action ) => {
                 verificationEmail: {error: action.payload, loading: false, success: null}
             }
         /*verificationEmail*/
+
+
+        /*delete Account*/
+        case actionType.DELETE_ACCOUNT_LOADING:
+            return{
+                ...state,
+                ...state.deleteAccount,
+                deleteAccount: {error: null, loading: true, success: null}
+            }
+        case actionType.DELETE_ACCOUNT_SUCCESS:
+            return{
+                ...state,
+                ...state.deleteAccount,
+                deleteAccount: {error: null, loading: false, success: "Account successfully deleted!"}
+            }
+        case actionType.VERIFY_ERROR:
+            console.log(action.payload)
+            return{
+                ...state,
+                ...state.deleteAccount,
+                deleteAccount: {error: action.payload, loading: false, success: null}
+            }
+        /*delete Account*/
 
         default:
             return state;

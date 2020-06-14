@@ -247,3 +247,33 @@ export const verifyEmail  = () => {
     }
 }
 
+
+
+export const DELETE_ACCOUNT = () => {
+
+    return{
+        type: actionType.DELETE_ACCOUNT_SUCCESS
+    }
+}
+export const deleteAccount  = () => {
+    return (dispatch, getState, { getFirebase, getFirestore}) => {
+        const firebase = getFirebase();
+        const firestore = getFirestore();
+        var user = firebase.auth().currentUser;
+
+        dispatch({type: actionType.EDIT_PROFILE_LOADING});
+        
+        firestore.collection("todos").doc(user.uid).delete()
+        .then(() => {
+            firestore.collection("users").doc(user.uid).delete()
+        })
+        .then(() => {
+            user.delete()
+            console.log(user.uid)
+            dispatch(DELETE_ACCOUNT())
+        }).catch(err => {
+            dispatch({type: actionType.DELETE_ACCOUNT_ERROR, payload: err})
+        })
+    }
+}
+

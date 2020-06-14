@@ -44,6 +44,13 @@ const Profile = (props) => {
     props.changePassword(values)
   } 
 
+
+  if(!id){
+    return(
+      <Redirect to="/"/>
+    )
+  }
+
   if(id && !verified){
     return(
       <Redirect to="/verify-email"/>
@@ -133,6 +140,15 @@ const Profile = (props) => {
                 {! props.cPassword.loading && ! props.cPassword.error &&  props.cPassword.success ? <p className={classes.Auth__Error__Success}>{ props.cPassword.success}</p> : null}
             </div>
         </div>
+        <div className={classes.Auth__Form} style={{marginTop: "7rem"}}>
+          <button type="submit" className={classes.Auth__Form___Button} style={{backgroundColor: "red"}}
+            onClick={() => props.deleteAccount()}
+          >
+              {
+                  props.cPassword.loading && !props.cPassword.error ? <ButtonLoader /> : "Delete Account"
+              }
+          </button>
+        </div>
         </div>
         </div>
     </div>
@@ -159,7 +175,8 @@ const mapDispatchToProps = dispatch => {
 
   return{
     changePassword: (newPassword) => dispatch(actionCreator.changePassword(newPassword)),
-    editProfile: (newCredential) => dispatch(actionCreator.editProfile(newCredential))
+    editProfile: (newCredential) => dispatch(actionCreator.editProfile(newCredential)),
+    deleteAccount: () => dispatch(actionCreator.deleteAccount())
   }
 }
 
