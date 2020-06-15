@@ -185,7 +185,7 @@ const authReducer = (state = initialState, action ) => {
                 ...state.deleteAccount,
                 deleteAccount: {error: null, loading: false, success: "Account successfully deleted!"}
             }
-        case actionType.VERIFY_ERROR:
+        case actionType.DELETE_ACCOUNT_ERROR:
             console.log(action.payload)
             return{
                 ...state,
